@@ -2,60 +2,137 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>碳帶速查工具</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>unitech維護專用</title>
   <style>
-    body { font-family: Arial; margin: 20px; }
-    h2 { color: #0066cc; }
-    label { display: block; margin-top: 10px; }
-    select, button { margin-top: 5px; font-size: 16px; }
-    #result { margin-top: 20px; font-weight: bold; color: #0066cc; }
-    optgroup { font-weight: bold; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    h2 {
+      color: #333;
+    }
+    select {
+      width: 400px;
+      padding: 8px;
+      font-size: 14px;
+    }
+    .key-box {
+      margin-top: 20px;
+    }
+    .key-part {
+      margin: 10px 0;
+    }
+    .copy-btn {
+      margin-left: 10px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <h2>碳帶寬度 ↔ 標籤寬度(點數)設定值速查</h2>
+ <h2>【<span style="color:blue; font-weight:bold;">unitech</span> 維護專用】</h2>
 
-  <label>選擇碳帶寬度 (mm):</label>
-  <select id="width">
-    <optgroup label="常見規格">
-      <option value="60">60 mm</option>
-      <option value="80">80 mm</option>
-      <option value="110">110 mm</option>
-      <option value="140">140 mm</option>
-      <option value="160">160 mm</option>
+  <select onchange="if(this.value) window.open(this.value,'_blank')">
+    <option value="">請選擇下載項目</option>
+
+    <optgroup label="工具下載">
+     
+ <option value="https://www.zebra.com/content/dam/support-dam/en/driver/unrestricted/0002/zsu-1191327.zip">
+         Zebra Setup Utilities (V1.1.9.1327)
+      </option>
+
+      <option value="https://drive.google.com/file/d/1J69ynXeMW2f4tF1Di54RIPDlZg8QCZ8I/view?usp=sharing">
+         TSC DiagTool (V163)_Google雲端空間
+      </option>
+      <option value="https://apac.tscprinters.com/zh-TW/form/send-download-link?file=7311&destination=/zh-TW/%E8%B3%87%E6%96%99%E4%B8%8B%E8%BC%89">
+        TSC Console PC (V3.4.0.8)
+      </option>
+      <option value="https://drive.google.com/file/d/1xoKAiLWwrsz9QzgP5Qu40v2wU0TC7zrN/view?usp=sharing">
+        TSC Console PC (V3.2.6.0)_Google雲端空間
+      </option>
     </optgroup>
-    <optgroup label="特殊規格">
-      <option value="51">51 mm (最小)</option>
-      <option value="100">100 mm</option>
-      <option value="120">120 mm</option>
-      <option value="150">150 mm</option>
-      <option value="168">168 mm (最大列印寬度)</option>
-      <option value="170">170 mm (碳帶最大寬度)</option>
+
+    <optgroup label="韌體下載">
+      <option value="https://www.zebra.com/cn/zh/support-downloads/drivers-operating-systems-firmware.html">
+        Zebra Firmware
+      </option>
+      <option value="https://apac.tscprinters.com/zh-TW">
+        TSC Firmware
+      </option>
+    </optgroup>
+
+
+
+    <optgroup label="驅動下載 - Zebra">
+      <option value="https://portal.seagullscientific.com/downloads/PrepareDownload?type=Driver&fileName=https%3a%2f%2fdy5utiwd2mogv.cloudfront.net%2fDrivers%2f12%2f12.0%2fZebra_12.0.exe&origin=%2fdownloads%2fdrivers&s3path=Drivers%2f12%2f12.0%2fZebra_12.0.exe">
+        Seagull (12.0)
+      </option>
+      <option value="https://www.zebra.com/content/dam/support-dam/en/driver/unrestricted/0002/zddriver-v1062628275-certified.zip">
+        Zebra原廠 (10.6.26.28275)
+      </option>
+    </optgroup>
+
+    <optgroup label="驅動下載 - TSC">
+      <option value="https://www.bartendersoftware.com/tw/resources/printer-drivers/tsc">
+        Seagull (12.0)
+      </option>
+    </optgroup>
+
+    <optgroup label="標籤軟體下載">
+      <option value="https://www.zebra.com/content/dam/support-dam/en/application/unrestricted/0001/zebradesigner3-330104.zip">
+        Zebra Designer 3 免費版 (3.3.0.104)(僅限Zebra機型搭原廠驅動)
+      </option>
+      <option value="https://apac.tscprinters.com/zh-TW/form/send-download-link?file=7288&destination=/zh-TW/%E8%B3%87%E6%96%99%E4%B8%8B%E8%BC%89">
+        BarTender 隨機版 (BT11.5.1_245374)(僅限TSC機型)
+      </option>
+      <option value="https://drive.google.com/file/d/1OB24frBBJnO2U8-hBT2sH9ifgHPdssZ3/view?usp=sharing">
+        BarTender 隨機版 (BT11.5.1_245374)(僅限TSC機型)_Google雲端空間
+      </option>
+      <option value="https://portal.seagullscientific.com/downloads/PrepareDownload?type=BarTender&fileName=https%3a%2f%2fdy5utiwd2mogv.cloudfront.net%2fBarTender%2f12.0%2fBT12.0.0_252359_Full_x64.exe&origin=%2fdownloads%2fbartender&s3path=BarTender%2f12.0%2fBT12.0.0_252359_Full_x64.exe">
+        BarTender 30天試用 (12.0版)
+      </option>
+      <option value="https://portal.seagullscientific.com/downloads/PrepareDownload?type=BarTender&fileName=https%3a%2f%2fdy5utiwd2mogv.cloudfront.net%2fBarTender%2f11.8%2fBT11.8.0_247912_Full_x64.exe&origin=%2fdownloads%2fbartender&s3path=BarTender%2f11.8%2fBT11.8.0_247912_Full_x64.exe">
+        BarTender 30天試用 (11.8版)
+      </option>
+      <option value="https://portal.seagullscientific.com/downloads/PrepareDownload?type=BarTender&fileName=https%3a%2f%2fdy5utiwd2mogv.cloudfront.net%2fBarTender%2f11.3%2fBT2022_R8_216048_Full_x64.exe&origin=%2fdownloads%2fbartender&s3path=BarTender%2f11.3%2fBT2022_R8_216048_Full_x64.exe">
+        BarTender 30天試用 (2022版)
+      </option>
     </optgroup>
   </select>
 
-  <label>選擇解析度:</label>
-  <select id="dpi">
-    <option value="200">200 dpi</option>
-    <option value="300">300 dpi</option>
-  </select>
+  <div class="key-box">
+    <br>
+    <strong>TSC BarTender 隨機版 Key</strong><br>
+    <div class="key-part">
+      <span id="part1">Z334-6NM1-QJSZ-LSB4</span>
+      <button class="copy-btn" onclick="copyKey('part1')">複製</button>
+    </div>
+    <br>
+    <a href="https://portal.seagullscientific.com/Home/Landing" target="_blank" rel="noopener noreferrer">
+      BarTender 客戶入口網站 (兌換金鑰)
+    </a>
+ <br>
+<br>
+<a href="https://www.cardpresso.com/cardpresso-software/latest-release/">
+      Cardpresso官網
+    </a>
+    <br>
+    
+  </div>
 
-  <button onclick="calculate()">查詢</button>
-
-  <div id="result"></div>
+  <br>
+  <a href="N1.html">碳帶寬度 ↔ 標籤寬度(點數)設定值速查</a>
+  <br><br>
 
   <script>
-    function calculate() {
-      let mm = parseFloat(document.getElementById("width").value);
-      let dpi = parseInt(document.getElementById("dpi").value);
-
-      let dots = (mm / 25.4) * dpi;
-      let maxDots = dpi === 200 ? 1323 : 1980;
-      if (dots > maxDots) dots = maxDots;
-
-      document.getElementById("result").innerText =
-        "碳帶寬度: " + mm + " mm → 建議設定值: " + Math.round(dots) + " dots (上限 " + maxDots + ")";
+    function copyKey(id) {
+      const keyText = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(keyText).then(() => {
+        alert("已複製: " + keyText);
+      }).catch(err => {
+        console.error("複製失敗:", err);
+      });
     }
   </script>
 </body>
